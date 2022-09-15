@@ -101,9 +101,19 @@
       "body": "qui consequuntur ducimus possimus quisquam amet similique\nsuscipit porro ipsam amet\neos veritatis officiis exercitationem vel fugit aut necessitatibus totam\nomnis rerum consequatur expedita quidem cumque explicabo"
     },
     {
-      "id": 24,
+      "id": 21,
       "title": "react typescript todo app completed",
       "body": "implements api calling, useState, useEffect, used custom hooks, used json-server for testing post request, learned Material UI"
+    },
+    {
+      "title": "aa",
+      "body": "aa",
+      "id": 22
+    },
+    {
+      "title": "Form instant validation",
+      "body": "Form validation done for every keystroke using onBlur & onChange we used 4-5 useState to implement this",
+      "id": 23
     }
   ]
 }

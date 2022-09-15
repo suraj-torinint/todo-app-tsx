@@ -2,7 +2,7 @@ import axios, { AxiosError, AxiosRequestConfig } from "axios";
 import { useEffect, useState } from "react";
 
 export interface todoType {
-    id: number;
+    id?: number;
     title: string;
     body: string;
 }

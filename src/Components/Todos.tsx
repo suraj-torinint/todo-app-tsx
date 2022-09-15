@@ -46,7 +46,7 @@ const Todos = () => {
                 </>
             )}
             {!loading &&
-                response?.map((todo, i) => (
+                response.map((todo, i) => (
                     <div className="card mx-5 my-2" key={i}>
                         <div className="card-body">
                             <div className="">

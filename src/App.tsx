@@ -1,5 +1,4 @@
 import { Route, Switch } from "react-router-dom";
-import "./App.css";
 import Home from "./Pages/Home";
 import CreateTodo from "./Pages/CreateTodo";
 import Header from "./Components/Header";

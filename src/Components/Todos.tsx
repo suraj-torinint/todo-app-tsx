@@ -6,7 +6,7 @@ const Todos = () => {
     // console.log(process.env.REACT_APP_BASE_URL);
     const { response, error, loading } = useAxios({
         method: "GET",
-        url: `${process.env.REACT_APP_BASE_URL}${"/todos"}`,
+        url: `${process.env.REACT_APP_BASE_URL}${"/posts"}`,
     });
 
     return (
@@ -36,8 +36,8 @@ const Todos = () => {
                     <div className="card mx-5 my-2" key={i}>
                         <div className="card-body">
                             <div className="">
-                                <p className="card-title h2">{todo.title}</p>
-                                <p className="card-subtitle mb-2 text-muted">Completed : {todo.completed === true ? "yes" : "no"}</p>
+                                <p className="card-title h2"><u className="fs-3 fw-bold text-muted">Title</u>: {todo.title}</p>
+                                <p className="card-subtitle mb-2 fs-5"><span className="fw-bold text-muted"><u>Body</u> : </span>{todo.body}</p>
                             </div>
                         </div>
                     </div>

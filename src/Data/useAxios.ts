@@ -36,7 +36,7 @@ import { useEffect, useState } from "react";
 export interface todoType {
     id: number;
     title: string;
-    completed: boolean;
+    body: string;
 }
 
 axios.defaults.baseURL = "https://jsonplaceholder.typicode.com";

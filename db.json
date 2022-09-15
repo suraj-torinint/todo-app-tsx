@@ -114,6 +114,21 @@
       "title": "Form instant validation",
       "body": "Form validation done for every keystroke using onBlur & onChange we used 4-5 useState to implement this",
       "id": 23
+    },
+    {
+      "title": "Shortened the code",
+      "body": "Shortened the code for better understanding & readablity",
+      "id": 24
+    },
+    {
+      "title": "installed react-router-dom v6",
+      "body": "Done some changes to createTodo to implement useNavigate() which is used to redirect at certain event like form Submission or button click. Also removed exact prop & added element prop to - further done some changes to app.tsx & fixed all the errors....",
+      "id": 25
+    },
+    {
+      "title": "testing button",
+      "body": "asdasdasd",
+      "id": 26
     }
   ]
 }

@@ -1,45 +1,12 @@
 import axios, { AxiosError, AxiosRequestConfig } from "axios";
 import { useEffect, useState } from "react";
 
-// const useAxios = (method: string, url: string, requestConfig: {}) => {
-//     method = method.toLowerCase()
-//     const [response, setResponse] = useState<AxiosResponse>();
-//     const [error, setError] = useState<AxiosError>();
-//     const [loading, setLoading] = useState(true);
-
-//     const controller = new AbortController();
-//     const fetchdata = async () => {
-//         try {
-//             const res = await axios[method](url, {
-//                 requestConfig,
-//                 signal: controller.signal,
-//             });
-//             console.log(res);
-//             setResponse(res.data);
-//         } catch (error) {
-//             setError(error);
-//         } finally {
-//             setLoading(false);
-//         }
-//     };
-//     useEffect(() => {
-//         fetchdata();
-
-//         return () => {
-//             controller.abort();
-//         };
-//     }, []);
-
-//     return [response, error, loading];
-// };
-
 export interface todoType {
     id: number;
     title: string;
     body: string;
 }
 
-axios.defaults.baseURL = "https://jsonplaceholder.typicode.com";
 
 const useAxios = (axiosParams: AxiosRequestConfig) => {
     const [response, setResponse] = useState<todoType[]>();

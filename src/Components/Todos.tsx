@@ -1,13 +1,27 @@
-// import axios, { AxiosResponse } from "axios";
-// import React, { useEffect, useState } from "react";
-import useAxios from "../Data/useAxios";
+import { AxiosError } from "axios";
+import { useEffect, useState } from "react";
+import TodoData from "../Data/ApiService";
+import { todoType } from "../Data/useAxios";
 
 const Todos = () => {
-    // console.log(process.env.REACT_APP_BASE_URL);
-    const { response, error, loading } = useAxios({
-        method: "GET",
-        url: `${process.env.REACT_APP_BASE_URL}${"/posts"}`,
-    });
+    const [response, setResponse] = useState<todoType[]>([]);
+    const [error, setError] = useState<AxiosError>();
+    const [loading, setLoading] = useState(true);
+
+    const fetchData = async () => {
+        try {
+            const result = await TodoData.getTodos();
+            setResponse(result);
+        } catch (err: any) {
+            setError(err);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
 
     return (
         <>
@@ -32,12 +46,19 @@ const Todos = () => {
                 </>
             )}
             {!loading &&
-                response?.slice(0, 10).map((todo, i) => (
+                response?.map((todo, i) => (
                     <div className="card mx-5 my-2" key={i}>
                         <div className="card-body">
                             <div className="">
-                                <p className="card-title h2"><u className="fs-3 fw-bold text-muted">Title</u>: {todo.title}</p>
-                                <p className="card-subtitle mb-2 fs-5"><span className="fw-bold text-muted"><u>Body</u> : </span>{todo.body}</p>
+                                <p className="card-title h2">
+                                    <u className="fs-3 fw-bold text-muted">Title</u>: {todo.title}
+                                </p>
+                                <p className="card-subtitle mb-2 fs-5">
+                                    <span className="fw-bold text-muted">
+                                        <u>Body</u> :{" "}
+                                    </span>
+                                    {todo.body}
+                                </p>
                             </div>
                         </div>
                     </div>

@@ -18,6 +18,8 @@ const CreateTodo = () => {
 
     const formHandler = (event: React.FormEvent) => {
         event.preventDefault();
+        console.log(title);
+        console.log(body);
         let newData = {
             id: 24,
             title: title,

@@ -129,6 +129,11 @@
       "title": "testing button",
       "body": "asdasdasd",
       "id": 26
+    },
+    {
+      "title": "Implemented useReducer in React Typescript",
+      "body": "Felt reallllllllllyyyyyyyy good when it worked, feels awesome when you accomplish something",
+      "id": 27
     }
   ]
 }

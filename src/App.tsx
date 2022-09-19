@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
-import CreateTodo from "./Pages/CreateTodo";
+import CreateTodo2 from "./Pages/CreateTodo2";
 import Header from "./Components/Header";
 import NotFound from "./Pages/NotFound";
 import ErrorBoundaries from "./Components/ErrorBoundaries";
@@ -14,7 +14,7 @@ function App() {
                 <Routes>
                     <Route path={"/home"} element={<Home />} />
                     <Route path={"/"} element={<Home />} />
-                    <Route path={"/create-todo"} element={<CreateTodo />} />
+                    <Route path={"/create-todo"} element={<CreateTodo2 />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </ErrorBoundaries>
